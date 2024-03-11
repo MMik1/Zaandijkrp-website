@@ -16,6 +16,147 @@
         justify-content: center;
     }
 
+    .contact {
+        position: relative;
+        min-height: 100vh;
+        padding: 50px 50px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        background: url(bg.jpg);
+        background-size: cover;
+    }
+
+    .contact .content {
+        max-width: 800px;
+        text-align: center;
+    }
+
+    .contact .content h2 {
+        font-size: 36px;
+        font-weight: 500;
+        color: #fff;
+    }
+
+    .contact .content p {
+        font-weight: 300;
+        color: #fff;
+    }
+
+    .container {
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-top: 30px;
+    }
+
+    .container .contactInfo {
+        width: 50%;
+        display: flex;
+        flex-direction: column;
+    }
+
+    .contact .contactInfo .box {
+        position: relative;
+        padding: 20px 0;
+        display: flex;
+    }
+
+    .contact .contactInfo .box .icon {
+        min-width: 60px;
+        height: 60px;
+        background: #fff;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        border-radius: 50%;
+        font-size: 22px;
+    }
+
+    .container .contactInfo .box .text {
+        display: flex;
+        margin-left: 20px;
+        font-size: 16px;
+        color: #fff;
+        flex-direction: column;
+        font-weight: 300;
+    }
+
+    .container .contactInfo .box .text h3 {
+        font-weight: 500;
+        color: #00bcd4;
+    }
+
+    .contactForm {
+        width: 40%;
+        padding: 40px;
+        background: #fff;
+    }
+
+    .contactForm h2 {
+        font-size: 30px;
+        color: #333;
+        font-weight: 300;
+    }
+
+    .contactForm .inputBox {
+        position: relative;
+        width: 100%;
+        margin-top: 10px;
+    }
+
+    .contactForm .inputBox input,
+    .contactForm .inputBox textarea {
+        width: 100%;
+        padding: 5px 0;
+        font-size: 16px;
+        margin: 10px 0;
+        border: none;
+        border-bottom: 2px solid #333;
+        outline: none;
+        resize: none;
+    }
+
+    .contactForm .inputBox span {
+        position: absolute;
+        Left: 0;
+        padding: 5px 0;
+        font-size: 16px;
+        margin: 10px 0;
+        pointer-events: none;
+        transition: 0.5s;
+        color: #666;
+    }
+
+    .contactForm .inputBox input:focus~span,
+    .contactForm .inputBox input:valid~span,
+    .contactForm .inputBox textarea:focus~span,
+    .contactForm .inputBox textarea:focus~span {
+        color: #e91e63;
+        font-size: 12px;
+        transform: translateY(-20px);
+    }
+
+    .contactForm .inputBox input[type="submit"] {
+        width: 100px;
+        background: #00bcd4;
+        color: #fff;
+        border: none;
+        cursor: pointer;
+        padding: 10px;
+        font-size: 18px;
+    }
+
+    @media (max-width: 991px){
+        .contact{
+            padding: 50px;
+        } .container{
+            flex-direction: column;
+        }
+    }
+
     nav {
         width: 100%;
         position: absolute;
@@ -55,31 +196,36 @@
     }
 
     /* Add this to your CSS to hide the search input by default */
-.search .search-input {
-    width: 0;
-    opacity: 0;
-    position: absolute;
-    z-index: -1; /* hide it behind other elements */
-    transition: all 0.4s ease; /* This ensures a smooth transition */
-}
+    .search .search-input {
+        width: 0;
+        opacity: 0;
+        position: absolute;
+        z-index: -1;
+        /* hide it behind other elements */
+        transition: all 0.4s ease;
+        /* This ensures a smooth transition */
+    }
 
-.search-icon {
-    /* Other styling rules for .search-icon */
-    transition: color 0.3s; /* Smooth color transition */
-    vertical-align: middle;
-}
+    .search-icon {
+        /* Other styling rules for .search-icon */
+        transition: color 0.3s;
+        /* Smooth color transition */
+        vertical-align: middle;
+    }
 
-.search-icon:hover {
-    color: #1aff00; /* Change to whatever color you like */
-}
+    .search-icon:hover {
+        color: #1aff00;
+        /* Change to whatever color you like */
+    }
 
     /* Remove the outline on focus */
     .search-input:focus {
         outline: none;
-        border: 1px solid transparent; /* Adjust as necessary */
+        border: 1px solid transparent;
+        /* Adjust as necessary */
         /* Add other styling as desired */
     }
-    
+
     .content {
         text-align: center;
         z-index: 2;
@@ -88,13 +234,37 @@
         top: 50%;
         left: 50%;
         transform: translate(-50%, -50%);
-        width: 100%; 
+        width: 100%;
     }
 
     .content h1 {
         font-size: 160px;
         font-weight: 600;
         margin: 0;
+    }
+
+    .button-33 {
+        background-color: #c2fbd7;
+        border-radius: 100px;
+        box-shadow: rgba(44, 187, 99, .2) 0 -25px 18px -14px inset, rgba(44, 187, 99, .15) 0 1px 2px, rgba(44, 187, 99, .15) 0 2px 4px, rgba(44, 187, 99, .15) 0 4px 8px, rgba(44, 187, 99, .15) 0 8px 16px, rgba(44, 187, 99, .15) 0 16px 32px;
+        color: green;
+        cursor: pointer;
+        display: inline-block;
+        font-family: CerebriSans-Regular, -apple-system, system-ui, Roboto, sans-serif;
+        padding: 7px 20px;
+        text-align: center;
+        text-decoration: none;
+        transition: all 250ms;
+        border: 0;
+        font-size: 16px;
+        user-select: none;
+        -webkit-user-select: none;
+        touch-action: manipulation;
+    }
+
+    .button-33:hover {
+        box-shadow: rgba(44, 187, 99, .35) 0 -25px 18px -14px inset, rgba(44, 187, 99, .25) 0 1px 2px, rgba(44, 187, 99, .25) 0 2px 4px, rgba(44, 187, 99, .25) 0 4px 8px, rgba(44, 187, 99, .25) 0 8px 16px, rgba(44, 187, 99, .25) 0 16px 32px;
+        transform: scale(1.05) rotate(-1deg);
     }
 
     @media (min-aspect-ratio: 16/9) {
@@ -110,4 +280,3 @@
             height: 100%;
         }
     }
-        

@@ -3,7 +3,9 @@ document.addEventListener('DOMContentLoaded', function () {
     const searchContainer = document.querySelector('.search');
     const searchInput = document.getElementById('searchInput');
     const searchForm = document.getElementById('searchForm');
+    const ipButton = document.querySelector('.button-33'); // IP Address button
 
+    // Search icon functionality
     searchIcon.addEventListener('click', function () {
         searchContainer.classList.toggle('active');
         const isActive = searchContainer.classList.contains('active');
@@ -22,18 +24,17 @@ document.addEventListener('DOMContentLoaded', function () {
         }
     });
 
+    // Search form functionality
     searchForm.addEventListener('submit', function (event) {
         event.preventDefault();
         const searchTerm = searchInput.value.toLowerCase();
 
-       
         switch (searchTerm) {
             case 'nieuws':
                 window.location.href = 'pages/nieuws.html';
                 break;
-          
-            case 'main':
-                window.location.href = 'pages/main.html';
+            case 'home':
+                window.location.href = 'index.html';
                 break;
             case 'shop':
                 window.location.href = 'pages/shop.html';
@@ -45,9 +46,20 @@ document.addEventListener('DOMContentLoaded', function () {
                 window.location.href = 'pages/credits.html';
                 break;
             default:
-                
                 alert('Zoek opdracht niet gevonden.');
                 break;
         }
     });
+
+    // IP Address copy functionality
+    if (ipButton) {
+        ipButton.addEventListener('click', function () {
+            const ipToCopy = this.getAttribute('data-ip');
+            navigator.clipboard.writeText(ipToCopy).then(() => {
+                alert('IP Address gecopyieerd: ' + ipToCopy);
+            }, () => {
+                alert('Niet gelukt om ip-addres te copyen');
+            });
+        });
+    }
 });
