@@ -7,7 +7,6 @@
     <title>Home | ZaandijkRP</title>
     <link rel="icon" type="image/x-icon" href="img/logo.png">
     <link rel="stylesheet" href="styles/style.css">
-    <script src="js/main.js"></script>
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" />
 </head>
 
@@ -17,7 +16,7 @@
             <source src="img/backgroundvideo.mp4" type="video/mp4">
         </video>
         <nav>
-            <img src="img/logo.png" class="logo"> 
+            <img src="img/logo.png" class="logo">
             <ul class="nav-items">
                 <li><a href="Index.html">HOME</a></li>
                 <li><a href="pages/nieuws.html">NIEUWS</a></li>
@@ -29,16 +28,19 @@
                         <div class="search">
                             <span class="search-icon material-symbols-outlined"> search </span>
                             <input id="searchInput" class="search-input" type="search">
+                            <!-- Voeg de inlogknop voor Steam toe -->
+                            <a href="https://steamcommunity.com/openid/login?openid.ns=1.0&openid.mode=checkid_setup&openid.return_to=YOUR_RETURN_URL&openid.realm=YOUR_REALM" class="steam-login-button">Login with Steam</a>
                         </div>
-                    </form>             
-                </nav>
-                    <div class="content">
-                        <h1>ZaandijkRP</h1>
-                        <button class="button-33" role="button" data-ip="mnode1.mymchosting.com:30120">IP-Adress</button>
-                    </div>
+                    </form>
                 </li>
             </ul>
+        </nav>
+        <div class="content">
+            <h1>ZaandijkRP</h1>
+            <button class="button-33" role="button" data-ip="mnode1.mymchosting.com:30120">IP-Adress</button>
+        </div>
     </div>
+    <script src="js/main.js"></script> <!-- Voeg de script-tag toe voor main.js -->
 </body>
 
 </html>

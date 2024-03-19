@@ -267,6 +267,31 @@
         transform: scale(1.05) rotate(-1deg);
     }
 
+    .news-description-box {
+        display: none;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        background-color: rgba(0, 0, 0, 0.8);
+        color: #fff;
+        padding: 20px;
+        border-radius: 10px;
+        z-index: 999;
+    }
+    
+    .news-description-box .close-btn {
+        position: absolute;
+        top: 5px;
+        right: 10px;
+        cursor: pointer;
+        font-size: 20px;
+    }
+    
+    .news-description-box p {
+        margin-top: 10px;
+    }
+
     @media (min-aspect-ratio: 16/9) {
         .back-video {
             width: 100%;

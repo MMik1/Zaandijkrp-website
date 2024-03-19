@@ -56,10 +56,49 @@ document.addEventListener('DOMContentLoaded', function () {
         ipButton.addEventListener('click', function () {
             const ipToCopy = this.getAttribute('data-ip');
             navigator.clipboard.writeText(ipToCopy).then(() => {
-                alert('IP Address gecopyieerd: ' + ipToCopy);
+                alert('IP Address gecopieerd: ' + ipToCopy);
             }, () => {
-                alert('Niet gelukt om ip-addres te copyen');
+                alert('Niet gelukt om IP-adres te kopiëren');
             });
+        });
+    }
+
+    // Steam OpenID link generation function
+    function generateSteamOpenIDLink(returnUrl, realmUrl) {
+        const steamOpenIDUrl = 'https://steamcommunity.com/openid/login';
+        const parameters = {
+            'openid.ns': 'http://specs.openid.net/auth/2.0',
+            'openid.mode': 'checkid_setup',
+            'openid.return_to': returnUrl,
+            'openid.realm': realmUrl
+        };
+    
+        // Build the query string based on the parameters
+        const queryString = Object.keys(parameters)
+            .map(key => encodeURIComponent(key) + '=' + encodeURIComponent(parameters[key]))
+            .join('&');
+    
+        // Combine the base URL with the query string to get the full URL
+        const openidUrl = steamOpenIDUrl + '?' + queryString;
+    
+        return openidUrl;
+    }
+
+    // Example usage for a localhost website
+    const returnUrl = 'http://127.0.0.1:5500/Index.html/auth/steam'; // Replace with your own return URL on localhost
+    const realmUrl = 'http://127.0.0.1:5500/Index.html'; // Replace with your localhost website URL
+    const steamOpenIDLink = generateSteamOpenIDLink(returnUrl, realmUrl);
+    console.log(steamOpenIDLink); // This will display the generated Steam OpenID link in the console
+
+    function showDescription(descriptionId) {
+        var descriptionBox = document.getElementById(descriptionId);
+        descriptionBox.style.display = "block";
+    }
+    
+    function hideDescription() {
+        var descriptionBoxes = document.querySelectorAll(".news-description-box");
+        descriptionBoxes.forEach(function(box) {
+            box.style.display = "none";
         });
     }
 });
