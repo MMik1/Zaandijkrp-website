@@ -287,6 +287,25 @@
         cursor: pointer;
         font-size: 20px;
     }
+
+    /* Nieuws sliders */
+
+    .post-slider{
+        border: 1px solid red;
+    }
+    .post-slider .post-wrapper {
+        width: 84%;
+        height: 350px;
+        margin: 0px auto;
+        border: 1px dashed red;
+    }
+
+    .post-slider .post-wrapper .post{
+        height: 300px;
+        width: 300px;
+        display: inline-block;
+        background-color: #1aff00;
+    }
     
     .news-description-box p {
         margin-top: 10px;
