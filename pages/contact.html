@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Contact</title>
+    <link rel="stylesheet" href="../styles/styleContact.css" />
+</head>
+
+<body>
+
+    <nav>
+        <img src="../img/logo.png" class="logo">
+        <ul class="nav-items">
+            <li><a href="../Index.html">HOME</a></li>
+            <li><a href="pages/nieuws.html">NIEUWS</a></li>
+            <li><a href="pages/shop.html">SHOP</a></li>
+            <li><a href="pages/contact.html">CONTACT</a></li>
+            <li><a href="pages/credits.html">CREDITS</a></li>
+            <li>
+                <form id="searchForm">
+                    <div class="search">
+                        <span class="search-icon material-symbols-outlined"> search </span>
+                        <input id="searchInput" class="search-input" type="search">
+                        <!-- Voeg de inlogknop voor Steam toe -->
+                        <a href="https://steamcommunity.com/openid/login?openid.ns=1.0&openid.mode=checkid_setup&openid.return_to=YOUR_RETURN_URL&openid.realm=YOUR_REALM"
+                            class="steam-login-button">Login with Steam</a>
+                    </div>
+                </form>
+            </li>
+        </ul>
+    </nav>
+
+    <div class="container">
+        <form>
+            <h1>Contact Us Form</h1>
+            <input type="text" id="firstName" placeholder="First Name" required />
+            <input type="text" id="lastName" placeholder="Last Name" required />
+            <input type="email" id="email" placeholder="Email" required />
+            <input type="text" id="mobile" placeholder="Mobile" required />
+            <h4>Type Your Message Here...</h4>
+            <textarea required></textarea>
+            <input type="submit" value="Send" id="button" />
+        </form>
+    </div>
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+
+    <footer class="site-footer">
+        <div class="workers-section">
+            <ul>
+                <li><strong>Mans</strong> - Eigenaar</li>
+                <li><strong>Floris</strong> - Eigenaar</li>
+                <li><strong>Joe</strong> - Hoofd Designer</li>
+                <li><strong>Sam</strong> - Hoofd Developer</li>
+            </ul>
+        </div>
+        <div class="container">
+            <span>Zaandijk RP</span>
+            <span>&copy;</span>
+            <a href="https://discord.gg/9rg8CcZJd9" target="_blank" aria-label="Discord">
+                <!-- Using Font Awesome for Discord logo -->
+                <i class="fab fa-discord"></i>
+            </a>
+        </div>
+    </footer>
+</body>
+
+</html>

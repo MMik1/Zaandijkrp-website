@@ -427,3 +427,52 @@
         left: 50%;
         transform: translate(-50%);
     }
+    .site-footer {
+        background-color: #333; /* Dark background */
+        color: #fff; /* White text color */
+        text-align: center; /* Center align text */
+        font-family: Arial, sans-serif; /* Default font */
+    }
+    
+    .site-footer .workers-section {
+        border-bottom: 1px solid #444; /* Separator */
+        padding: 20px 0; /* Padding for the section */
+    }
+    
+    .site-footer .workers-section ul {
+        list-style: none; /* Remove default list styling */
+        padding: 0; /* Remove default padding */
+        margin: 0 auto; /* Center align the list */
+        display: inline-block; /* Align items horizontally for wider screens */
+        text-align: left; /* Align text to the left */
+    }
+    
+    .site-footer .workers-section li {
+        margin-bottom: 10px; /* Space between items */
+    }
+    
+    .site-footer .workers-section li:last-child {
+        margin-bottom: 0; /* Remove margin for the last item */
+    }
+    
+    .site-footer .container {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 15px; /* Space between items */
+        padding: 20px 0; /* Adjusted padding */
+    }
+    
+    .site-footer a {
+        color: #7289da; /* Discord brand color */
+        text-decoration: none; /* No underline */
+    }
+    
+    .site-footer a:hover {
+        opacity: 0.8; /* Slight transparency on hover */
+    }
+    
+    .fa-discord { /* Adjusting Font Awesome Discord Icon */
+        color: #7289da; /* Discord brand color */
+        font-size: 30px; /* Icon size */
+    }
